@@ -7,7 +7,6 @@ import {  makeStyles } from "@material-ui/core";
 import { Typography } from "@material-ui/core";
 import axios from "axios";
 
-import theme from "./theme";
 import logo from "./logo.png";
 import AlignItemsList from "./components/List";
 
@@ -70,8 +69,7 @@ function App() {
             Heroku Demo
           </Typography>
         </Toolbar>
-      </AppBar>
-      
+      </AppBar> 
       <AlignItemsList products={products} />
     </div>
   );

@@ -6,7 +6,7 @@ import Divider from "@material-ui/core/Divider";
 import ListItemText from "@material-ui/core/ListItemText";
 import ListItemAvatar from "@material-ui/core/ListItemAvatar";
 import Avatar from "@material-ui/core/Avatar";
-import { Typography, Card, Paper } from "@material-ui/core";
+import { Paper } from "@material-ui/core";
 import theme from "../theme";
 
 const useStyles = makeStyles((theme) => ({
@@ -14,8 +14,7 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     maxWidth: "70ch",
     backgroundColor: theme.palette.background.paper,
-    margin: "0 auto",
-    marginTop: "50px",
+    margin: "20px auto",
     direction: "rtl",
   },
   inline: {
@@ -26,14 +25,13 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     backgroundColor: theme.palette.secondary.main,
     color: theme.palette.primary.main,
-    fontSize:theme.spacing(4),
-    fontFamily: 'Montserrat'
+    fontSize: theme.spacing(4),
+    fontFamily: "Montserrat",
   },
 }));
 
 const DescriptionCSS = withStyles({
   "@global": {
-    // You should target [class*="MuiButton-root"] instead if you nest themes.
     ".MuiListItemText-secondary": {
       textAlign: "right",
       lineHeight: "200%",
@@ -71,7 +69,7 @@ export default function AlignItemsList({ products }) {
           </div>
         ))
       ) : (
-        <div style={{ width: "100%", textAlign: "center" }}>
+        <div style={{ width: "100%", textAlign: "center", marginTop:"50px" }}>
           .........No Data........
         </div>
       )}
