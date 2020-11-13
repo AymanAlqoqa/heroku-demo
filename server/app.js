@@ -2,13 +2,10 @@ const express = require("express");
 const Products = require("./src/model/products");
 
 const app = express();
-app.get("/", async (req, res) => {
+app.get("/api/v1/products", async (req, res) => {
   try {
-    const product = await Products.create({
-      title: "Book",
-      description: "this is the first book",
-    });
-    res.status(201).send(product);
+    const products = await Products.find()
+    res.status(201).send(products);
   } catch (error) {
     res.status(500).send(error);
   }
